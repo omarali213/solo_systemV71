@@ -14,3 +14,92 @@
 /* V7 — balanced discipline, skills and RPG progression */
 #view-growth .panel{margin-bottom:16px}.minimum-list,.milestone-list{display:grid;gap:9px;margin:14px 0}.minimum-list label,.milestone-list label{display:flex;align-items:flex-start;gap:9px;padding:10px 11px;border:1px solid var(--line);border-radius:10px;background:#0a1322;font-size:12px;line-height:1.7;color:var(--text)}.minimum-list input,.milestone-list input{width:17px;height:17px;flex:0 0 17px;margin-top:2px;accent-color:#58d5a5}.goal-card,.boss-box{padding:14px;margin:12px 0;border:1px solid #2b4969;border-radius:13px;background:linear-gradient(145deg,#101e33,#0b1220)}.goal-card>p,.boss-box>p{font-size:12px;line-height:1.8;color:var(--muted)}.goal-card>.progress{margin:12px 0 7px}.goal-card>small{font-size:10px;color:var(--muted)}.skill-tree-list{display:grid;gap:10px;margin-top:14px}.skill-node{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px;border:1px solid var(--line);border-radius:12px;background:#0a1322}.skill-node.unlocked{border-color:#2e795d;background:linear-gradient(110deg,#10291f,#0a1322)}.skill-node b{font-size:12px}.skill-node p{margin:5px 0;font-size:11px;color:var(--muted)}.skill-node small{font-size:10px;color:#9eb0c9}.skill-node button{flex-shrink:0}.boss-box h3{margin:10px 0}.boss-box .milestone-list{margin-bottom:0}.view-growth .section-head{margin-bottom:16px}.view-growth .two-col{align-items:start}@media(max-width:760px){.skill-node{align-items:flex-start;flex-direction:column}.skill-node button{width:100%}}
 .skill-path-label{display:flex;flex-direction:column;gap:8px;margin:12px 0;color:var(--text);font-size:12px;font-weight:700}.skill-path-label select{max-width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0a1322;color:var(--text);font:inherit}
+
+.avatar svg,.profile-photo-preview svg,.evo-avatar svg{width:100%;height:100%;display:block}.evo-avatar{width:100px;height:100px;flex:0 0 100px;border-radius:18px;overflow:hidden;border:1px solid var(--blue)}.evo-avatar img{width:100%;height:100%;object-fit:cover}@media(max-width:640px){.evo-avatar{width:70px;height:70px;flex-basis:70px}}
+
+/* ================= V9 ================= */
+.player-title{display:block;color:var(--purple);font-size:10px;letter-spacing:.5px;min-height:0}
+.player-title:empty{display:none}
+.title-chip{cursor:pointer;font-family:inherit}
+.title-chip.active{border-color:var(--gold);color:var(--gold);background:#2a2412}
+/* Gates */
+.gates-overview{margin-bottom:14px;display:grid;gap:8px}
+.gate-row{display:flex;gap:8px;flex-wrap:wrap}
+.gate-chip{padding:7px 12px;border-radius:999px;font-size:12px;border:1px solid var(--line);background:#0e1628}
+.gate-chip b{margin-inline-start:6px}
+.gate-chip.blue,.tag.gate-tag.blue{border-color:#2f6bd6;color:#8cb8ff}
+.gate-chip.yellow,.tag.gate-tag.yellow{border-color:#a8861f;color:#f1d27a}
+.gate-chip.red,.tag.gate-tag.red{border-color:#b0334a;color:#ff8da1}
+.quest-card.gate-yellow{border-color:#5b4a1c}
+.quest-card.gate-red{border-color:#7a2538;box-shadow:0 0 22px #ff3d5d14 inset}
+/* Shadow army behind the hero */
+.hero-shadows{position:absolute;bottom:0;left:18px;display:flex;align-items:flex-end;gap:2px;z-index:0;pointer-events:none;max-width:60%}
+.shadow-slot{display:block;animation:shadowFloat 3.4s ease-in-out infinite}
+.shadow-fig{width:30px;height:52px;fill:#03060d;filter:drop-shadow(0 0 4px #3aa0ff) drop-shadow(0 0 12px #2b6cff99)}
+.shadow-more{align-self:center;margin-inline-start:6px;color:#8cb8ff;font:700 13px Rajdhani}
+@keyframes shadowFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+/* Attributes */
+.attr-card .attr-meter{height:6px;border-radius:99px;background:#0a1221;border:1px solid #1b2a43;overflow:hidden;margin:10px 0}
+.attr-card .attr-meter i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--purple))}
+/* Status FAB + window */
+.status-fab{color:var(--cyan);border-color:#2f6681;box-shadow:0 0 14px #3aa0ff30}
+body.zone-active .status-fab{display:none}
+.status-modal{padding:0;border:0;background:transparent;max-width:min(560px,94vw);width:100%;color:var(--text)}
+.status-modal::backdrop{background:#02060fcc;backdrop-filter:blur(3px)}
+.status-card{border:1px solid #3aa0ff88;border-radius:18px;padding:22px;background:linear-gradient(160deg,#0b2038ee,#0a1226f2);box-shadow:0 0 40px #2b6cff40,inset 0 0 60px #3aa0ff10}
+.status-top{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.status-avatar{width:64px;height:64px;border-radius:16px;overflow:hidden;border:1px solid #3b7395;background:#0b1224;flex:none}
+.status-avatar svg,.status-avatar img{width:100%;height:100%;object-fit:cover}
+.status-id{flex:1;min-width:0}
+.status-id h2{margin:2px 0;font-size:22px}
+.status-title{display:block;color:var(--purple);font-size:12px}
+.status-rank{color:var(--cyan);font:700 12px Rajdhani;letter-spacing:1px}
+.status-level{text-align:center}
+.status-level small{display:block;color:var(--muted);font:600 10px Rajdhani;letter-spacing:2px}
+.status-level b{font:700 38px Rajdhani;color:var(--blue);text-shadow:0 0 16px #3aa0ff88}
+.status-bars{display:grid;gap:10px;margin-bottom:14px}
+.sbar{display:grid;grid-template-columns:1fr auto;gap:4px 10px;align-items:center;font-size:12px;color:#b9cbe4}
+.sbar .progress{grid-column:1/-1;order:3}
+.sbar em{font-style:normal;color:var(--muted);font-size:11px}
+.progress i.hp{background:linear-gradient(90deg,#ff5f7a,#ff9aa8)}
+.progress i.mp{background:linear-gradient(90deg,#4a7bff,#65f0e3)}
+.status-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
+.status-grid div{padding:9px;border:1px solid #1f3552;border-radius:10px;background:#09111f;text-align:center}
+.status-grid small{display:block;color:var(--muted);font:600 9px Rajdhani;letter-spacing:2px}
+.status-grid b{font-size:13px}
+.status-stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;font-size:11px;color:#b9cbe4}
+.status-stats span{padding:4px 9px;border:1px solid #1f3552;border-radius:999px}
+.status-stats b{color:var(--cyan)}
+.status-bonus{display:grid;gap:4px;margin-bottom:14px;font-size:12px}
+.status-bonus small{color:#a9bad3}
+.status-foot{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+/* System popup (QUEST RECEIVED / COMPLETED) */
+.sys-popup{position:fixed;top:92px;left:50%;transform:translate(-50%,-14px);z-index:40;opacity:0;pointer-events:none;transition:.28s}
+.sys-popup.show{opacity:1;transform:translate(-50%,0)}
+.sys-popup-box{display:grid;gap:3px;text-align:center;min-width:240px;max-width:86vw;padding:14px 26px;border:1px solid #58c7ff;border-radius:6px;background:linear-gradient(180deg,#0a2a4acc,#071426dd);box-shadow:0 0 30px #3aa0ff66,inset 0 0 22px #3aa0ff22;backdrop-filter:blur(6px)}
+.sys-popup-tag{color:#8fdcff;font:600 10px Rajdhani;letter-spacing:4px}
+.sys-popup-box b{font:700 22px Rajdhani;letter-spacing:3px;color:#e6f6ff;text-shadow:0 0 14px #58c7ff}
+.sys-popup-box small{color:#9fc4e0;font-size:12px}
+/* Penalty Zone */
+.zone-overlay{position:fixed;inset:0;z-index:25;display:grid;place-items:center;padding:18px;background:radial-gradient(ellipse at center,#3a0714f2,#12030af7 70%);overflow:auto}
+.zone-box{width:min(560px,100%);text-align:center;padding:28px 22px;border:1px solid #ff3d5d99;border-radius:16px;background:#14060ccc;box-shadow:0 0 50px #ff3d5d33,inset 0 0 40px #ff3d5d14}
+.zone-eyebrow{color:#ff8da1;font:600 11px Rajdhani;letter-spacing:4px;margin:0 0 6px;animation:zonePulse 1.6s infinite}
+.zone-box h2{margin:0 0 8px;font-size:28px;color:#ffd6dd}
+.zone-reason{color:#e9b3bd;margin:0 0 16px}
+.zone-task{display:grid;gap:6px;padding:16px;border:1px dashed #ff6a84;border-radius:12px;background:#240a12;margin-bottom:14px}
+.zone-task span{color:#ff8da1;font-size:11px;letter-spacing:2px}
+.zone-task b{font-size:19px;color:#fff}
+.zone-timer{font:700 34px Rajdhani;letter-spacing:3px;color:#ffb3c0;margin-bottom:14px}
+.zone-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:12px}
+.zone-actions button:disabled{opacity:.45;cursor:not-allowed}
+.zone-note{display:block;color:#c58f9a;margin-bottom:8px}
+.zone-safe{color:#a8767f;font-size:11px;line-height:1.7;margin:0}
+@keyframes zonePulse{0%,100%{opacity:1}50%{opacity:.45}}
+@media(max-width:760px){.status-grid{grid-template-columns:repeat(2,1fr)}.hero-shadows{max-width:100%;opacity:.55}}
+@media(prefers-reduced-motion:reduce){.shadow-slot,.zone-eyebrow{animation:none}.sys-popup{transition:none}}
+
+/* Adaptive System Assistant */
+.ai-report-panel{margin-bottom:18px}.ai-plan-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}.ai-plan-card,.ai-challenge{padding:15px;border:1px solid #284365;border-radius:12px;background:linear-gradient(145deg,#101f35,#0a1222)}.ai-plan-card h4{margin:7px 0}.ai-plan-card p,.ai-challenge p{color:#b8c8de;font-size:13px;line-height:1.8}.ai-plan-card .ghost-btn{margin-top:7px}.ai-columns{align-items:start}.ai-shadow-intro{padding:12px 0;color:#c7d8ec;line-height:1.8}.ai-shadow-intro p{margin:5px 0}.ai-chat-messages{height:230px;overflow:auto;display:flex;flex-direction:column;gap:9px;padding:12px;border:1px solid #233b59;border-radius:12px;background:#070d19;margin:12px 0}.ai-chat-bubble{max-width:94%;white-space:pre-wrap;line-height:1.8;font-size:13px;padding:10px 12px;border-radius:12px}.ai-chat-bubble.user{align-self:flex-start;background:#173755;border:1px solid #2d6388}.ai-chat-bubble.shadow{align-self:flex-end;background:#211a3b;border:1px solid #66509a}.ai-chat-form{display:flex;gap:8px}.ai-chat-form input{flex:1;min-width:0;padding:11px;border:1px solid #29415e;border-radius:10px;background:#080f1d;color:#eef6ff;font:inherit}.ai-shadow-intro .tag{margin-inline-start:7px}@media(max-width:900px){.ai-plan-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.ai-plan-grid{grid-template-columns:1fr}.ai-chat-form{flex-direction:column}}
+
+/* AI assistant navigation and layout polish */
+.nav-item em{font-style:normal;font-size:10px;color:#7cebd0;margin-inline-start:auto}.ai-shadow-panel{margin-bottom:24px}.ai-shadow-panel .skill-path-label{display:block;margin-top:12px}.ai-shadow-panel select{margin-top:8px;width:100%;padding:10px;border:1px solid #29415e;border-radius:10px;background:#080f1d;color:#eef6ff;font:inherit}.ai-chat-form button{white-space:nowrap}.ai-chat-messages .empty{margin:auto;text-align:center;color:#91a8c5}
